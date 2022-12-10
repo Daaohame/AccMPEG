@@ -160,7 +160,7 @@ for conv, bound, base, v in product(conv_list, bound_list, base_list, v_list):
             f" {v}_qp_{high}.mp4 -s {v} -o {output} --tile_size {tile}  -p maskgen_pths/{model_name}.pth.best"
             f" --conv_size {conv} "
             f" -g {v}_qp_{high}.mp4 --bound {bound} --hq {high} --lq {base} --smooth_frames 10 --app {app_name} "
-            f"--maskgen_file {x264_dir}/../video-compression/maskgen/{filename}.py --visualize_step_size {visualize_step_size}"
+            f"--maskgen_file maskgen/{filename}.py --visualize_step_size {visualize_step_size}"
         )
 
     os.system(
